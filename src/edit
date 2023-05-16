@@ -1,0 +1,13 @@
+ <Stack spacing='2' mt='4px' ml='8px' width='250px'>
+      <Autocomplete options ={skill} renderInput={(params)=><TextField {...params} label='skills'/>} />
+    </Stack>
+    </>
+    
+    import {Stack,Autocomplete,TextField} from "@mui/material";
+import useEffectAPI from './componetns/useEffectAPI';
+useEffect(() => {
+  navigator.geolocation.getCurrentPosition(({ coords: {latitude, longitude} }) => {
+      setCoordinates({ lat: latitude, lng: longitude});
+      setCoordsLoaded(true);
+  });
+}, []);
